@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html>
+<head>
+	 <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="main.css">
+</head>
+<body>
+  <div class="jptb-top-panel">
+    <div class="jptb-center">
+      <div class="jptb-jackpot-item">
+        <div class="jptb-jackpot-counter">
+          <div class="jptb-jackpot-counter-wrapper">
+            <div class='jptb-jackpot-counter-cell'><div class='jptb-roller' data-rotate='0' data-duration='5000' style='transform: rotateX(0turn);'><div class='jptb-plane jptb-figure0'>0</div><div class='jptb-plane jptb-figure1'>1</div><div class='jptb-plane jptb-figure2'>2</div><div class='jptb-plane jptb-figure3'>3</div><div class='jptb-plane jptb-figure4'>4</div><div class='jptb-plane jptb-figure5'>5</div><div class='jptb-plane jptb-figure6'>6</div><div class='jptb-plane jptb-figure7'>7</div><div class='jptb-plane jptb-figure8'>8</div><div class='jptb-plane jptb-figure9'>9</div></div></div>
+            <div class='jptb-jackpot-counter-cell'><div class='jptb-roller' data-rotate='0' data-duration='5000' style='transform: rotateX(0turn);'><div class='jptb-plane jptb-figure0'>0</div><div class='jptb-plane jptb-figure1'>1</div><div class='jptb-plane jptb-figure2'>2</div><div class='jptb-plane jptb-figure3'>3</div><div class='jptb-plane jptb-figure4'>4</div><div class='jptb-plane jptb-figure5'>5</div><div class='jptb-plane jptb-figure6'>6</div><div class='jptb-plane jptb-figure7'>7</div><div class='jptb-plane jptb-figure8'>8</div><div class='jptb-plane jptb-figure9'>9</div></div></div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+<button id="button">🐙</button>
+<output id="output"></output>
+<pre><p id="log"></p></pre>
+<script>
+var log = document.getElementById('log'),
+      output = document.getElementById('output'),
+      wrapper = document.querySelector('.jptb-jackpot-counter-wrapper'),
+      dur = 3000, num = 1, a = [0];
+      elemArr = Array.from(document.querySelectorAll('.jptb-roller'));
+
+document.addEventListener("DOMContentLoaded",  function(ev) {
+  getlog( 'DOMContentLoaded' );
+  move(elemArr[elemArr.length - 1], 1);
+  a[a.length - 1]++;
+    }, false);
+
+wrapper.addEventListener('transitionrun',  function(event) { getlog( event.type ); }, false);
+
+wrapper.addEventListener('transitionend',  function(event) { getlog( event.type );
+    if(a.indexOf(10) >= 0){
+      offsetArr(a.indexOf(10));
+    }
+    a[a.length - 1]++;
+    output.innerHTML = a;
+    move(elemArr[elemArr.length - 1], a[a.length - 1]);
+
+    }, false);
+
+function move(el, rotate){
+  rotate = (rotate/10).toFixed(1);
+  console.log(rotate);
+  el.style = "transform: rotateX(" + rotate  + "turn);";
+}
+
+/*
+ (o,o)
+<  .  >
+--"-"--- 
+*/
+
+function generator(a) {
+    if(a.indexOf(10) >= 0){
+      offsetArr(a.indexOf(10));
+    }
+    output.innerHTML = a;
+    a[a.length - 1]++;
+    move(elemArr[elemArr.length - 1], a[a.length - 1]);
+   setTimeout(generator, dur, a);
+};
+
+function offsetArr(index) {
+ elemArr[index].style = "transform: rotateX(0turn);transition:transform 0s 0s;";
+    a[index] = 0;
+  if(index == 0) {
+    a.splice(0, 0, 1);
+  }
+    a[index - 1]++;
+    move(elemArr[index - 1], a[index - 1]);
+    
+    if(index > 0) offsetArr(a.indexOf(10));
+    return false 
+}
+
+
+
+           
+// log event in the console
+function getlog(msg) {
+    log.textContent += msg + "\n";
+    var ot = log.scrollHeight - log.clientHeight;
+    if (ot > 0) log.scrollTop = ot;
+}
+
+	
+// })();
+// }, false);
+</script>
+🇺🇦
+</body>
+</html>
