@@ -2,7 +2,7 @@
 # export PATH=$HOME/bin:/usr/local/bin:$PATH
 
 # Path to your oh-my-zsh installation.
-export ZSH=$HOME/.oh-my-zsh
+  export ZSH=/home/calmos/.oh-my-zsh
 
 # Set name of the theme to load. Optionally, if you set this to "random"
 # it'll load a random theme each time that oh-my-zsh is loaded.
@@ -51,13 +51,18 @@ ZSH_THEME="sorin"
 # Custom plugins may be added to ~/.oh-my-zsh/custom/plugins/
 # Example format: plugins=(rails git textmate ruby lighthouse)
 # Add wisely, as too many plugins slow down shell startup.
-plugins=(git man)
+plugins=(git colorize gulp npm emoji)
 
 source $ZSH/oh-my-zsh.sh
 
 # User configuration
-source $ZSH/plugins/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
+source $ZSH/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
 # export MANPATH="/usr/local/man:$MANPATH"
+
+HISTFILE=$HOME/.zsh_history
+HISTSIZE=9999
+SAVEHIST=9999
+setopt share_history
 
 # You may need to manually set your language environment
 # export LANG=en_US.UTF-8
@@ -68,6 +73,12 @@ source $ZSH/plugins/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
 # else
 #   export EDITOR='mvim'
 # fi
+
+# Compilation flags
+# export ARCHFLAGS="-arch x86_64"
+
+# ssh
+# export SSH_KEY_PATH="~/.ssh/rsa_id"
 
 extract () {
  if [ -f $1 ] ; then
@@ -110,12 +121,6 @@ pk () {
  fi
 }
 
-# Compilation flags
-# export ARCHFLAGS="-arch x86_64"
-
-# ssh
-# export SSH_KEY_PATH="~/.ssh/rsa_id"
-
 # Set personal aliases, overriding those provided by oh-my-zsh libs,
 # plugins, and themes. Aliases can be placed here, though oh-my-zsh
 # users are encouraged to define aliases within the ZSH_CUSTOM folder.
@@ -124,10 +129,20 @@ pk () {
 # Example aliases
 # alias zshconfig="mate ~/.zshrc"
 # alias ohmyzsh="mate ~/.oh-my-zsh"
-alias wttr="wget -O - wttr.in -q"
-#alias apt="sudo apt"
+
+alias wttr="wget -O - wttr.in/kiev -q"
+alias apt="sudo apt"
+#alias gulp="sudo gulp"
 alias du='du --human-readable --total'
 alias df='df --human-readable'
 alias ls='ls --classify --color --human-readable --group-directories-first'
+# Добавляем все файлы, берём случайный текст коммита и отправляем
+alias random_commit='git commit -m "$(curl -s http://whatthecommit.com/index.txt)"'
+alias grf='git add . ; random_commit ; git push'
+alias cowrand='cowsay $(curl -s http://whatthecommit.com/index.txt)'
 
 unsetopt correct_all
+
+export NVM_DIR="$HOME/.nvm"
+[ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"  # This loads nvm
+[ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"  # This loads nvm bash_completion

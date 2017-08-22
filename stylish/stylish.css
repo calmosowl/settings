@@ -1,0 +1,573 @@
+@-moz-document domain("habrahabr.ru") {
+.post .content {
+	font-size: 16px;
+	color: #333;
+	font-weight: normal;
+	font-family:  Ubuntu, 'Segoe UI', Verdana,sans-serif;
+}
+
+pre code {
+	font-family:  'Fira Mono', Ubuntu, 'Segoe UI', Verdana,monotype !important;
+    font-size: 16px !important;
+}
+}
+
+@-moz-document domain("www.last.fm") {
+.chartlist .chartlist-play-button,
+.trc_related_container,
+.stationlinks,
+.mpu-subscription-upsell--mpu,
+.tonefuze--desktop,
+.share-desktop {
+ display: none !important;   
+}
+
+
+}
+
+/* 🔚 */
+
+@namespace url(http://www.w3.org/1999/xhtml);
+
+@-moz-document url("about:newtab") {
+  
+  body {
+	font: message-box;
+	background-color: rgb(233, 225, 217); /* rgb(227, 225, 223)  */
+}
+  a.newtab-link {
+    display: flex;
+    flex-flow: column nowrap;
+  }
+  .newtab-site .newtab-cell{
+  box-shadow: 0 3px 4px 0 rgba(0,0,0,.14),0 3px 3px -2px rgba(0,0,0,.2),0 1px 8px 0 rgba(0,0,0,.12) !important;
+    transition: 3ms !important;
+    transition-property: top, left, opacity, box-shadow, background-color;
+	--cell-corner-radius: 3px;
+	background-color: transparent;
+	border-radius: 3px;
+
+  }
+  
+  .newtab-cell:not([ignorehover]) .newtab-control:hover ~ .newtab-link, .newtab-cell:not([ignorehover]) .newtab-link:hover, .newtab-site[dragged] {
+	border: 0px none;
+	box-shadow:0 4px 5px 0 rgba(0,0,0,.14),0 1px 10px 0 rgba(0,0,0,.12),0 2px 4px -1px rgba(0,0,0,.2) !important;
+	margin: 0px;
+}
+  
+  .newtab-thumbnail.placeholder,
+  .newtab-thumbnail.enhanced-content{
+    flex:0;
+  }
+  
+  .newtab-title {
+    background-color: transparent;
+    border: 0px none;
+    display: none;
+  }
+  
+  .newtab-site[pinned] .newtab-title::before {display: none;}
+  
+  .newtab-thumbnail.thumbnail {
+    position: unset !important;
+    display: block !important;
+    background-size: contain !important;
+     background-position: 50% !important;
+    height: 210px;
+  }
+  
+  [href="https://learn.javascript.ru/"] .newtab-thumbnail.thumbnail {
+    background-image: url("https://learn.javascript.ru/img/sitetoolbar__logo_small_ru.svg") !important;
+    background-position-x: -50% !important;
+}
+  
+    [href="https://jsfiddle.net/"] .newtab-thumbnail.thumbnail {
+    background-image: url("http://www.unixstickers.com/image/cache/data/stickers/jsfiddle/JSfiddle-blue-w-type.sh-600x600.png") !important;
+}
+  [href^="https://gitlab"] .newtab-thumbnail.thumbnail {
+    background-image: url("https://gitlab.com/uploads/-/system/project/avatar/13083/logo-extra-whitespace.png") !important;
+ }
+  
+    [href^="https://github"] .newtab-thumbnail.thumbnail {
+    background-image: url("https://assets-cdn.github.com/images/modules/logos_page/Octocat.png") !important;
+ }
+
+   [href^="https://feedly.com"] .newtab-thumbnail.thumbnail {
+    background-image: url("http://s3.feedly.com/img/feedly-512.png") !important;
+ }
+  
+     [href^="https://developer.mozilla"] .newtab-thumbnail.thumbnail {
+    background-image: url("https://developer.cdn.mozilla.net/static/img/web-docs-sprite.22a6a085cf14.svg") !important;
+       background-position-y: 100% !important;
+ }
+
+ 
+}
+
+/* 🔚 */
+
+@-moz-document domain("redmine.devme.in") {
+div.flash.notice {
+	background: url(../images/true.png) 62px 141px no-repeat;
+	background-color: #81c784;
+	border-color: #81c784;
+	color: #fff;
+}
+* {
+	border: 0px none !important;
+}
+div.details {
+	background: #E9E1D9;
+	border: 0px none;
+}
+body,
+#wrapper,
+#content,
+#main.nosidebar #content,
+#main,
+#sidebar,
+#footer {
+	background-color: RGB(227,225,223) !important;
+	background-image: none !important;
+	border: 0px none;
+	font-family: Ubuntu;
+	font-size: 14px;
+}
+
+pre {
+    background-color: #243435 !important;
+    color: #D4E7D4 !important;
+    font-weight: 600;
+}
+
+#top-menu {
+    background: #24292e !important;
+    box-shadow: none;
+}
+
+#top-menu a,
+#top-menu #loggedas {
+    color: rgba(227, 225, 223, 0.55);
+    font-weight: 500;
+}
+
+.select2-container {
+    display: none !important;
+}
+
+#sidebar,
+#content,
+#header {
+	box-shadow: 0 4px 5px 0 rgba(0, 0, 0, .14), 0 1px 10px 0 rgba(0, 0, 0, .12), 0 2px 4px -1px rgba(0, 0, 0, .2);
+}
+#main-menu,
+#header {
+	background-image: none !important;
+	background-color: #24292E !important;
+	color: #C8C9CA;
+}
+
+#header {
+	display: flex;
+	flex-wrap: wrap;
+	padding: 4px 8px 10px 6px;
+}
+
+div#quick-search {
+    order: 3;
+    flex: 0 3 auto;
+    position: relative;
+    z-index: 999;
+    margin-left: auto;
+    margin-top: 4px;
+    margin-right: 8px;
+}
+
+#main-menu {
+	flex: 0 1 auto;
+  order: 2;
+  width: auto;
+  position: relative;
+}
+
+#main-menu li a {
+	color: rgba(255, 255, 255, 0.75);
+	text-shadow: none;
+}
+#main-menu li a:hover, .issues.selected {
+	color: rgba(255, 255, 255, 0.95);
+	text-decoration: none;
+}
+#header input,
+#quick-search #q {
+	min-height: 24px;
+	padding: 6px 8px;
+	font-size: 14px;
+	line-height: 20px;
+	color: #24292e;
+	vertical-align: middle;
+	background-color: rgba(255,255,255,0.125);
+	background-repeat: no-repeat;
+	background-position: right 8px center;
+	border: 1px solid #d1d5da;
+	border-radius: 3px;
+	outline: none;
+	box-shadow: inset 0 1px 2px rgba(27, 31, 35, 0.075);
+}
+
+#main-menu li a.selected {
+background: none !important;
+background-color: rgba(255,255,255,0.125) !important;
+box-shadow: inset 0 1px 2px rgba(27, 31, 35, 0.075);
+border: 1px solid #d1d5da;
+border-radius: 3px;
+
+}
+
+table.list {
+    position: relative;
+    border: 1px solid rgba(0,0,0,.12) !important;
+    border-collapse: collapse;
+    white-space: nowrap;
+    font-size: 14px;
+    background-color: #fff;
+		box-shadow: 0 2px 2px 0 rgba(0,0,0,.14), 0 3px 1px -2px rgba(0,0,0,.2), 0 1px 5px 0 rgba(0,0,0,.12);
+}
+
+table.list thead {
+    padding-bottom: 3px;
+}
+
+table.list td:first-of-type, table.list th:first-of-type {
+    padding-left: 24px;
+}
+
+table.list th {
+    position: relative;
+    vertical-align: bottom;
+    text-overflow: ellipsis;
+    font-weight: 700;
+    line-height: 24px;
+    letter-spacing: 0;
+    height: 48px;
+    font-size: 14px;
+    color: rgba(0,0,0,.54);
+    padding-bottom: 8px;
+    box-sizing: border-box;
+}
+
+table.list th {
+    padding: 0 18px 12px 18px;
+}
+
+table.list tbody tr:hover {
+    background-color: #eee;
+}
+
+table.list tbody tr {
+    position: relative;
+    height: 48px;
+    transition-duration: .28s;
+    transition-timing-function: cubic-bezier(.4,0,.2,1);
+    transition-property: background-color;
+}
+
+table.list tbody td {
+    position: relative;
+    height: 48px;
+    border-top: 1px solid rgba(0,0,0,.12) !important;
+    border-bottom: 1px solid rgba(0,0,0,.12) !important;
+    padding: 12px 18px;
+    box-sizing: border-box;
+		vertical-align: middle;
+}
+
+table.list tbody td {
+/*     text-align: right; */
+		padding: 0px;
+}
+
+tr.status-6 {
+	opacity: 0.36;
+}
+
+[type="submit"], [onclick*="submitPreview"], [onclick*="submitPreview"] + a {
+	background-color: rgba(158,158,158,.2);
+    box-shadow: 0 2px 2px 0 rgba(0,0,0,.14), 0 3px 1px -2px rgba(0,0,0,.2), 0 1px 5px 0 rgba(0,0,0,.12);
+		border: none;
+    border-radius: 2px;
+    color: #000;
+    position: relative;
+    height: 36px;
+    margin: 0;
+    min-width: 64px;
+    padding: 0 16px;
+    display: inline-block;
+    font-size: 14px;
+    font-weight: 500;
+    text-transform: uppercase;
+    letter-spacing: 0;
+    overflow: hidden;
+    will-change: box-shadow;
+    transition: box-shadow .2s cubic-bezier(.4,0,1,1),background-color .2s cubic-bezier(.4,0,.2,1),color .2s cubic-bezier(.4,0,.2,1);
+    outline: none;
+    cursor: pointer;
+    text-decoration: none;
+    text-align: center;
+    line-height: 36px;
+    vertical-align: middle;
+		font-family: Ubuntu;
+}
+
+[onclick*="submitPreview"] + a	{
+	color: rgb(233,93,98);
+}
+
+[type="submit"]:focus:not(:active),  [onclick*="submitPreview"]:focus:not(:active) {
+    box-shadow: 0 0 8px rgba(0,0,0,.18), 0 8px 16px rgba(0,0,0,.36);
+    background-color: rgba(158,150,140,.4);
+		text-decoration: none;
+}
+
+[type="submit"]:hover,  [onclick*="submitPreview"]:hover {
+    background-color: rgba(158,150,140,.4);
+		text-decoration: none;
+}
+
+div.thumbnails div {
+    background-color: rgba(0,0,0,.03);
+    border-radius: 2px;
+    box-shadow: 0 0 1px rgba(0,0,0,.11), 0 1px 2px rgba(0,0,0,.22);
+    box-sizing: border-box;
+    color: #757575;
+    -webkit-transition: background-color .15s cubic-bezier(.4,0,.2,1),box-shadow .15s cubic-bezier(.4,0,.2,1);
+    transition: background-color .15s cubic-bezier(.4,0,.2,1),box-shadow .15s cubic-bezier(.4,0,.2,1);
+}
+
+div.thumbnails div:hover {
+    box-shadow: 0 0 3px rgba(0,0,0,.13), 0 3px 6px rgba(0,0,0,.26);
+}
+
+#header > h1 {
+	background: url(http://vignette2.wikia.nocookie.net/firststrikemod/images/f/f2/Rebelsymbol.png/revision/latest?cb=20071031231453) no-repeat;
+	background-size: 36px;
+	background-position: 14px;
+	order: 1;
+	flex: 2 0 calc(100% - 130px);
+	margin: 0 0 30px 0;
+}
+
+div#content > h2, div#content h2.contacts_header, div#content > div.filters h2, div#content > #add-news > h2, div#content > #add-message > h2, div#content > .message.details > h2, div#content > .board.details > h2, div#content > #add-document > h2 {
+	background: #E9E1D9;
+}
+
+select {
+	background: transparent !important;
+	box-shadow: 0px 1px 0px rgba(0,0,0, 0.4);
+	transition: all 0.3s;
+	border-bottom: 1px solid rgba(0,0,0,.12);
+	position: relative;
+}
+
+[name="commit"] {
+	margin-right: 10px;
+}
+
+/*===============================*/
+.even, .odd {
+    background-color: transparent;
+}
+
+/*Immediately*/
+tr.odd.priority-7, table.list tbody tr.odd.priority-7:hover { color: #900; font-weight: bold; }
+tr.odd.priority-7 { background: #ffc4c4; }
+tr.even.priority-7, table.list tbody tr.even.priority-7:hover { color: #900; font-weight: bold; }
+tr.even.priority-7 { background: #ffd4d4; }
+tr.priority-7 a, tr.priority-7:hover a { color: #900; }
+tr.odd.priority-7 td, tr.even.priority-7 td { border-color: #ffb4b4; }
+
+/*High*/
+tr.odd.priority-5, table.list tbody tr.odd.priority-5:hover { color: #900; }
+tr.odd.priority-5 { background: #e9d9d9; }
+tr.even.priority-5, table.list tbody tr.even.priority-5:hover { color: #900; }
+tr.even.priority-5 { background: #e9d9d9; }
+tr.priority-5 a { color: #900; }
+tr.odd.priority-5 td, tr.even.priority-5 td { border-color: #ffb4b4; }
+
+
+/*Low*/
+tr.odd.priority-3, table.list tbody tr.odd.priority-3:hover { color: #559; }
+tr.odd.priority-3 { background: #dbe9d9; }
+tr.even.priority-3, table.list tbody tr.even.priority-3:hover { color: #559; }
+tr.even.priority-3 { background: #dbe9d9; }
+tr.priority-3 a { color: #559; }
+tr.odd.priority-3 td, tr.even.priority-3 td { border-color: #add7f3; }
+
+/*========== icons ===========*/
+
+.icon {
+	position: relative;
+	/*background: none;*/
+}
+
+.icon-edit:before {
+	position: absolute;
+	content: "\1F589";
+	left: -10px;
+	
+}
+
+}
+
+/* 🔚 */
+
+:root.theme-dark [class*="devtools"] {font-family: ubuntu, tahoma,arial,helvetica,sans-serif !important; font-size: 14px !important;}
+:root.theme-dark {
+
+  --main-tab-active-hover-bg-color: #1A4666;
+  --theme-body-background: #222222 !important;
+  --theme-sidebar-background: #222222 !important;
+  --theme-contrast-background: #ffb35b;
+
+  --theme-tab-toolbar-background: #222222 !important;
+  --theme-toolbar-background: #222222 !important;
+  --theme-selection-background: #111 !important;
+  --theme-selection-background-semitransparent: rgba(235, 230, 222, 0.8);
+  --theme-selection-color: #dcc6ae !important;
+  --theme-splitter-color: #222222 !important;
+  --theme-comment: #757873 !important;
+
+  --theme-body-color: #727272 !important;
+  --theme-body-color-alt: #727272 !important;
+  --theme-body-color-inactive: #8fa1b2;
+  --theme-content-color1: #727272 !important;
+  --theme-content-color2: #8fa1b2;
+  --theme-content-color3: #5f7387;
+
+  --theme-highlight-green: #498F6C !important;/*html & css tags*/
+  --theme-highlight-blue: #5C918F !important;
+  --theme-highlight-bluegrey: #5C918F !important;
+  --theme-highlight-purple: #938C87 !important;/*attribute, css rule name*/
+  --theme-highlight-lightorange: #918221 !important;
+  --theme-highlight-orange: #FFCB6B !important;
+  --theme-highlight-red: #d99b28e6 !important; /*css rules value*/
+  --theme-highlight-pink: #938C87 !important;
+  --theme-highlight-gray: #A84048 !important; /*attribute value*/
+
+  /* For accessibility purposes we want to enhance the focus styling. This
+   * should improve keyboard navigation usability. */
+  --theme-focus-outline-color: #ced3d9;
+
+  /* Colors used in Graphs, like performance tools. Mostly similar to some "highlight-*" colors. */
+  --theme-graphs-green: #C3E88D !important;
+  --theme-graphs-blue: #46afe3 !important;
+  --theme-graphs-bluegrey: #5e88b0 !important;
+  --theme-graphs-purple: #C792EA !important;
+  --theme-graphs-yellow: #FFCB6B !important;
+  --theme-graphs-orange: #F78C6C !important;
+  --theme-graphs-red: #f07178 !important;
+  --theme-graphs-grey: #757873 !important;
+  --theme-graphs-full-red: #FF5370 !important;
+  --theme-graphs-full-blue: #B2CCD6 !important;
+
+  /* Images */
+  --theme-pane-collapse-image: url(chrome://devtools/skin/images/pane-collapse.svg);
+  --theme-pane-expand-image: url(chrome://devtools/skin/images/pane-expand.svg);
+
+  /* Tooltips */
+  --theme-tooltip-border: 0px none;
+  --theme-tooltip-background: rgba(19, 28, 38, .9);
+  --theme-tooltip-shadow: rgba(25, 25, 25, 0.76);
+
+  /* Command line */
+  --theme-command-line-image: url(chrome://devtools/skin/images/commandline-icon.svg#dark-theme);
+  --theme-command-line-image-focus: url(chrome://devtools/skin/images/commandline-icon.svg#dark-theme-focus);
+}
+
+:root {
+  --theme-focus-border-color-textbox: #0675d3;
+  --theme-textbox-box-shadow: rgba(97,181,255,.75);
+
+  /* For accessibility purposes we want to enhance the focus styling. This
+   * should improve keyboard navigation usability. */
+  --theme-focus-outline: 0px dotted var(--theme-focus-outline-color) !important;
+  --theme-focus-box-shadow-textbox: 0 0 0 1px var(--theme-textbox-box-shadow) !important;
+  --toolbarbutton-background: rgba(110,120,130,0.1);
+  --toolbarbutton-border-color: transparent;
+  --toolbarbutton-hover-background: rgba(110,120,130,0.2);
+  --toolbarbutton-hover-border-color: var(--toolbarbutton-border-color);
+  --toolbarbutton-checked-background: var(--theme-selection-background);
+  --toolbarbutton-checked-color: var(--theme-selection-color);
+  --toolbarbutton-checked-border-color: var(--toolbarbutton-border-color);
+}
+
+
+:root.theme-dark [class*="devtools"] [class*="console"] *,
+.theme-dark [class*="devtools"] .theme-sidebar,
+.theme-body {
+  font-size: 13px !important;
+  text-rendering: optimizeLegibility !important;
+  font-weight: 600 !important;
+  letter-spacing: 0.04em !important;
+  text-shadow: 2px 2px 2px rgba(0,0,0,.2);
+}
+
+/* 🔚 */
+
+@namespace url(http://www.w3.org/1999/xhtml);
+
+@-moz-document url-prefix("view-source:")
+{
+  
+  html, body, pre, *|*:root
+  {
+    background-color: #272822;
+    background-image: none;
+    color: #f8f8f2;
+  }
+
+  #viewsource
+  {
+    font-family: Consolas, Monospace, Sans-Serif;
+  }
+
+  ::selection
+  {
+    background: #49483E;
+  }
+
+  ::-moz-selection
+  {
+    background: #49483E;
+  }
+
+  .highlight .attribute-name
+  {
+    color: #a6e22e;
+  }
+  /* String */
+  .highlight .attribute-value
+  {
+    color: #e6db74;
+  }
+  /* Comment */
+  .highlight .comment
+  {
+    color: #75715e;
+  }
+  /* Keyword */
+  .highlight .start-tag, .highlight .end-tag
+  {
+    color: #f92672;
+  }
+
+  .highlight .error, .highlight .error > :-moz-any(.start-tag, .end-tag, .comment, .cdata, .doctype, .pi, .entity, .attribute-name, .attribute-value)
+  {
+    box-shadow: 0px 0px 20px #f00;
+    background-color: #f00;
+    color: #fff;
+    border-radius: 2px;
+  }
+}
+
+/* 🔚 */
